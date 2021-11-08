@@ -10,7 +10,8 @@ const [data, setData] = useState([])
 // eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(async () => {
   try{
-      const res = await axios.get("http://localhost:3000/")
+         const res = await axios.get("https://urlshortener-backend-1.herokuapp.com/")
+
   console.log(res)
   setData(res.data)
   }catch(err){
@@ -22,7 +23,8 @@ const add = async (e) => {
   if(url === ""){
     alert("please enter the long url")
   }else{
-    await axios.post("http://localhost:3000/",{
+      await axios.post("https://urlshortener-backend-1.herokuapp.com/",{
+
       url:url
     })
     
